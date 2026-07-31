@@ -1,0 +1,38 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#0A1428;color:#E8EEF9;font-family:'Golos Text',system-ui,sans-serif;overflow-x:hidden}
+a{color:#9DB8E8;text-decoration:none}a:hover{color:#CFE0FF}
+input,textarea,button{font-family:inherit}
+::selection{background:rgba(90,140,255,.35)}
+@keyframes eh-blurin{from{opacity:0;filter:blur(14px);transform:translateY(26px)}to{opacity:1;filter:blur(0);transform:none}}
+@keyframes eh-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes eh-marquee-r{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@keyframes eh-spin{to{transform:translate(-50%,-50%) rotate(1turn)}}
+@keyframes eh-dash{to{stroke-dashoffset:-140}}
+@keyframes eh-float{0%,100%{transform:translateY(-10px)}50%{transform:translateY(10px)}}
+@keyframes eh-petrol{0%{background-position:0% 50%}100%{background-position:300% 50%}}
+@keyframes eh-glowpulse{0%,100%{opacity:.2}50%{opacity:.95}}
+@keyframes eh-draw{to{stroke-dashoffset:0}}
+@keyframes eh-heat{0%{transform:translateY(0); opacity:0}20%{opacity:.7}100%{transform:translateY(-26px); opacity:0}}
+@keyframes eh-flow{to{stroke-dashoffset:-44}}
+@keyframes eh-rise{0%{opacity:0;transform:translateY(0) scale(.6)}30%{opacity:.5}100%{opacity:0;transform:translateY(-28px) scale(1.35)}}
+@keyframes eh-flick{0%,100%{opacity:.85}45%{opacity:.25}55%{opacity:.9}}
+@keyframes eh-smoke{0%{opacity:0;transform:translate(0,0) scale(.5)}25%{opacity:.32}100%{opacity:0;transform:translate(8px,-64px) scale(1.7)}}
+@media (max-width:1020px){
+[data-hero-grid]{grid-template-columns:1fr !important}
+[data-factory-wrap]{justify-self:center !important;width:100% !important;max-width:min(560px,92vw) !important;margin:0 !important}
+[data-factory-wrap] svg{overflow:hidden !important}
+[data-hero-grid]{max-width:100%}
+}
+@media (max-width:700px){
+#services [data-svc-grid]{grid-template-columns:1fr !important}
+#services [data-svc-grid] > div{grid-column:auto !important}
+[data-proj-arrows]{display:none !important}
+}
+@media (max-width:640px){
+#hero{padding:114px 16px 36px !important}
+#proj-stage{height:430px !important}
+[data-hero-ctas]{flex-direction:column !important}
+[data-hero-ctas] a{text-align:center}
+}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}}
